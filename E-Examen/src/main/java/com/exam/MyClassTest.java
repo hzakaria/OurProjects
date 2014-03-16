@@ -2,5 +2,5 @@ package com.exam;
 
 public class MyClassTest {
 
-public test
+public String name;
 }
