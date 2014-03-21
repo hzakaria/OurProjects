@@ -1,4 +1,4 @@
-package com.exam.DaoImpl;
+package com.exam.daoImpl;
 
 import com.exam.dao.IExamenDao;
 
