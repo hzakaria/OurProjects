@@ -10,4 +10,9 @@ public class ModelTest
     {
         System.out.println( "Hello World!" );
     }
+    
+    private void meth() {
+		// TODO Auto-generated method stub
+
+	}
 }
