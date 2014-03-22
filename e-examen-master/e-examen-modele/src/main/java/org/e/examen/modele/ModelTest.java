@@ -15,4 +15,9 @@ public class ModelTest
 		// TODO Auto-generated method stub
 
 	}
+    
+    private void fnd() {
+		// TODO Auto-generated method stub
+
+	}
 }
