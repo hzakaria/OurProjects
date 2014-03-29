@@ -1,4 +1,4 @@
-package com.formation.examen.user;
+package com.examen.model.user;
 
 import javax.persistence.Entity;
 
