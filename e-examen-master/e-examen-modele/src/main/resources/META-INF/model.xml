@@ -8,14 +8,13 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
 
-	<description>lswp model Spring configuration</description>
+	<description>e-examen model Spring configuration</description>
 	
 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
 				<value>classpath:lswp.properties</value>
 				<value>classpath:external-conf.properties</value>
-				<value>classpath:application-settings.properties</value>
 			</list>
 		</property>
 	</bean>
@@ -25,16 +24,9 @@
 		p:url="${dataSource.url}"
 		p:username="${dataSource.username}"
 		p:password="${dataSource.password}"
-		p:initialSize="${connection.pool.initial.size}"
-		p:minIdle="${connection.pool.min.idle}"
-		p:maxActive="${connection.pool.max.active}"
-		p:testOnBorrow="false"
-		p:testWhileIdle="true"
-        p:timeBetweenEvictionRunsMillis="300000"
-        p:minEvictableIdleTimeMillis="300000"
 		/>
 		
-	<context:component-scan base-package="com.lafarge.lswp.model, com.lafarge.lcwp.security" />
+	<context:component-scan base-package="com.formation.examen" />
 	
 	<!-- LOCAL entity manager factory -->
 	<bean id="entityManagerFactory"
@@ -44,16 +36,13 @@
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
 		</property>
 		<property name="packagesToScan">
-			<list><value>com.lafarge.lswp</value></list>
+			<list><value>com.formation.examen</value></list>
 		</property>
 		<property name="jpaProperties">
 			<props>
 				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
 				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
 				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
-			 	<prop key="hibernate.ejb.naming_strategy">com.lafarge.lswp.model._hbm.LafargeNamingStrategy</prop>
-				<prop key="hibernate.ejb.interceptor">com.lafarge.lswp.model._hbm.AuditInterceptor</prop>
-				<!-- <prop key="hibernate.globally_quoted_identifiers">true</prop> -->
 			</props>
 		</property>
 	</bean>
