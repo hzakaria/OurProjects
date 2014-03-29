@@ -3,13 +3,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.formation.e-examen</groupId>
-    <artifactId>e-examen</artifactId>
+    <groupId>com.examen</groupId>
+    <artifactId>examen</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
  
-  <artifactId>e-examen-modele</artifactId>
-  <name>e-examen-modele</name>
+  <artifactId>e-examen-model</artifactId>
+  <name>e-examen-model</name>
   <url>http://maven.apache.org</url>
   
   <properties>
