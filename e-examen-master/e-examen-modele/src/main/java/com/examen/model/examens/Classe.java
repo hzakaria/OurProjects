@@ -1,4 +1,4 @@
-package com.formation.examen.test;
+package com.examen.model.examens;
 
 import javax.persistence.Entity;
 
